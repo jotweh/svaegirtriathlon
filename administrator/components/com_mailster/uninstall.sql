@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS `#__mailster_lists`;
+DROP TABLE IF EXISTS `#__mailster_users`;
+DROP TABLE IF EXISTS `#__mailster_mails`;
+DROP TABLE IF EXISTS `#__mailster_groups`;
+DROP TABLE IF EXISTS `#__mailster_list_groups`;
+DROP TABLE IF EXISTS `#__mailster_list_members`;
+DROP TABLE IF EXISTS `#__mailster_group_users`;
+DROP TABLE IF EXISTS `#__mailster_queued_mails`;
+DROP TABLE IF EXISTS `#__mailster_threads`;
+DROP TABLE IF EXISTS `#__mailster_attachments`;
+DROP TABLE IF EXISTS `#__mailster_notifies`;
+DROP TABLE IF EXISTS `#__mailster_log`;

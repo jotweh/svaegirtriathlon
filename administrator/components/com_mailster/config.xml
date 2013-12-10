@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	 @package Joomla
+	 @subpackage Mailster
+	 @copyright (C) 2010 Holger Brandt IT Solutions
+	 @license GNU/GPL, see license.txt
+	 Mailster is free software; you can redistribute it and/or
+	 modify it under the terms of the GNU General Public License 2
+	 as published by the Free Software Foundation.
+	 
+	 Mailster is distributed in the hope that it will be useful,
+	 but WITHOUT ANY WARRANTY; without even the implied warranty of
+	 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	 GNU General Public License for more details.
+	 
+	 You should have received a copy of the GNU General Public License
+	 along with Mailster; if not, write to the Free Software
+	 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA
+	 or see http://www.gnu.org/licenses/.
+-->
+<config>	
+	<params group="general">	
+		<param name="cronjob_key" type="text" default="" label="COM_MAILSTER_CRONJOB_KEY"
+		    description="COM_MAILSTER_CRONJOB_KEY_MAILSTER_PRO">
+		</param>
+		
+		<param type="spacer" name="a" label="" default="" />
+		<param name="date_format" type="text" default="%d.%m.%Y %H:%M:%S" label="COM_MAILSTER_DATE_FORMAT_IN_EMAILS"
+		    description="COM_MAILSTER_DATE_FORMAT_ANALOG_TO_PHP_DATE_FORMAT_STRING" />		    
+		<param name="add_reply_prefix" type="radio" default="1" label="COM_MAILSTER_ADD_REPLY_SUBJECT_PREFIX"
+		    description="COM_MAILSTER_ADD_TEXT_DEFINED_BELOW_IN_FRONT_OF_SUBJECT_IN_REPLY_MAILS">
+			<option value="0">COM_MAILSTER_JNO</option>
+			<option value="1">COM_MAILSTER_JYES</option>
+		</param>
+		<param name="reply_prefix" type="text" default="Re:" label="COM_MAILSTER_REPLY_SUBJECT_PREFIX"
+		    description="COM_MAILSTER_TEXT_TO_PUT_IN_FRONT_OF_SUBJECT_IN_REPLY_MAILS">
+		</param>	    
+		<param name="undo_line_wrapping" type="radio" default="0" label="COM_MAILSTER_UNDO_LINE_WRAPPING_IN_PLAIN_TEXT_MAILS"
+		    description="COM_MAILSTER_SOME_MAIL_SERVERS_AUTOMATICALLY_INSERT_LINE_BREAKS_AFTER_A_FIXED_CHARACTER_NUMBER_IN_A_LINE">
+			<option value="0">COM_MAILSTER_JNO</option>
+			<option value="1">COM_MAILSTER_JYES</option>
+		</param>
+		
+		<param name="mail_from_field" type="radio" default="0" label="COM_MAILSTER_MAIL_FROM_FIELD"
+		    description="COM_MAILSTER_THE_EMAILS_FORWARDED_USE_THIS_FOR_THE_FROM_FIELD">
+			<option value="0">COM_MAILSTER_SENDER_ADDRESS</option>
+			<option value="1">COM_MAILSTER_MAILING_LIST_ADDRESS</option>
+		</param>
+		<param name="name_from_field" type="radio" default="0" label="COM_MAILSTER_NAME_FROM_FIELD"
+		    description="COM_MAILSTER_THE_EMAILS_FORWARDED_USE_THIS_FOR_THE_FROM_FIELD_AS_NAME">
+			<option value="0">COM_MAILSTER_SENDER_NAME</option>
+			<option value="1">COM_MAILSTER_MAILING_LIST_NAME</option>
+		</param>
+		
+		<param name="mail_from_email_for_from_name_field" type="radio" default="0" label="COM_MAILSTER_MAIL_FROM_FIELD_USED_FOR_NAME_FIELD"
+		    description="COM_MAILSTER_SENDER_ADDRESS_AS_SENDER_NAME_WHEN_SENDER_NAME_EMPTY">
+			<option value="0">COM_MAILSTER_JNO</option>
+			<option value="1">COM_MAILSTER_JYES</option>
+		</param>
+		
+		<param name="tag_mailster_mails" type="radio" default="1" label="COM_MAILSTER_ADD_MAILSTER_HEADER"
+		    description="COM_MAILSTER_ALL_MAILS_FORWARDED_FROM_MAILSTER_HAVE_A_FIXED_MAILSTER_HEADER_FIELD">
+			<option value="0">COM_MAILSTER_JNO</option>
+			<option value="1">COM_MAILSTER_JYES</option>
+		</param>
+		
+		<param type="spacer" name="b" label="" default="" />	
+		
+		<param name="words_to_filter" type="textarea" cols="50" rows="3" 
+			default="BadWord, Very Bad Words, Really Bad Words" size="50"
+			label="COM_MAILSTER_WORDS_TO_FILTER"
+			description="COM_MAILSTER_MAILS_CONTAINING_THIS_WORDS_IN_SUBJECT_OR_BODY_ARE_NOT_FORWARDED" />
+			
+		<param type="spacer" name="c" label="" default="" />
+		
+		<param name="recaptcha_public_key" type="text" default="" label="COM_MAILSTER_RECAPTCHA_PUBLIC_KEY"
+		    description="COM_MAILSTER_RECAPTCHA_API_KEY_CAN_BE_GOT_FROM_GOOGLE_URL">
+		</param>
+		<param name="recaptcha_private_key" type="text" default="" label="COM_MAILSTER_RECAPTCHA_PRIVATE_KEY"
+		    description="COM_MAILSTER_RECAPTCHA_API_KEY_CAN_BE_GOT_FROM_GOOGLE_URL">
+		</param>
+		<param name="recaptcha_theme" type="list" default="red"
+			label="COM_MAILSTER_RECAPTCHA_THEME"
+			description="COM_MAILSTER_RECAPTCHA_THEME_CHANGE_THE_STYLE_OF_THE_RECAPTCHA">
+			<option value="red">COM_MAILSTER_RED</option>
+			<option value="white">COM_MAILSTER_WHITE</option>
+			<option value="blackglass">COM_MAILSTER_BLACK</option>
+			<option value="clean">COM_MAILSTER_CLEAN</option>
+		</param>
+		<param name="recaptcha_lang" type="list" default="en"
+			label="COM_MAILSTER_RECAPTCHA_LANGUAGE"
+			description="COM_MAILSTER_RECAPTCHA_LANGUAGE_CHOOSE_FROM_SUPPORTED_LANGUAGES">
+			<option value="en">COM_MAILSTER_ENGLISH</option>
+			<option value="nl">COM_MAILSTER_DUTCH</option>
+			<option value="fr">COM_MAILSTER_FRENCH</option>
+			<option value="de">COM_MAILSTER_GERMAN</option>
+			<option value="pt">COM_MAILSTER_PORTUGESE</option>
+			<option value="ru">COM_MAILSTER_RUSSIAN</option>
+			<option value="es">COM_MAILSTER_SPANISH</option>
+			<option value="tr">COM_MAILSTER_TURKISH</option>
+		</param>
+			
+		<param type="spacer" name="d" label="" default="" />
+		
+		<param name="show_user_description" type="radio" default="0" label="COM_MAILSTER_SHOW_USER_DESCRIPTION"
+		    description="COM_MAILSTER_SHOW_USER_DESCRIPTION_OF_USER_DATA_STORED_IN_MAILSTER">
+			<option value="0">COM_MAILSTER_JHIDE</option>
+			<option value="1">COM_MAILSTER_JSHOW</option>
+		</param>
+		
+		<param name="local_js_framework" type="radio" default="0" label="COM_MAILSTER_LOAD_LOCAL_JS_FRAMEWORK"
+		    description="COM_MAILSTER_LOAD_JAVASCRIPT_FRAMEWORK_FROM_LOCAL_SERVER_INSTEAD_FROM_GOOGLE_API_SERVER">
+			<option value="0">COM_MAILSTER_JNO</option>
+			<option value="1">COM_MAILSTER_JYES</option>
+		</param>
+		
+		<param name="use_alt_txt_vars" type="radio" default="0" label="COM_MAILSTER_USE_ALTERNATIVE_TEXT_VARIABLES"
+		    description="COM_MAILSTER_USE_ALTERNATIVE_TEXT_VARIABLES_SEE_DOCUMENTATION">
+			<option value="0">COM_MAILSTER_JNO</option>
+			<option value="1">COM_MAILSTER_JYES</option>
+		</param>
+				
+		<param type="spacer" name="e" label="" default="" />
+		
+		<param name="logging_level" type="list" default="3"
+			label="COM_MAILSTER_LOGGING_LEVEL"
+			description="COM_MAILSTER_LOGGING_LEVEL_DETERMINES_WHICH_EVENTS_LOGGED_TEXT_FILE">
+			<option value="0">COM_MAILSTER_LOGGING_OFF</option>
+			<option value="1">COM_MAILSTER_LOGGING_ERRORS_ONLY</option>
+			<option value="3">COM_MAILSTER_LOGGING_NORMAL</option>
+			<option value="4">COM_MAILSTER_LOGGING_MAX</option>
+		</param>
+		<param name="log_entry_destination" type="radio" default="0" label="COM_MAILSTER_LOG_DESTINATION"
+		    description="COM_MAILSTER_LOG_DESTINATION_WHERE_LOG_ENTRIES_ARE_SAVED">
+			<option value="0">COM_MAILSTER_JFILE</option>
+			<option value="1">COM_MAILSTER_DATABASE</option>
+			<option value="2">COM_MAILSTER_DATABASE_AND_FILE</option>
+		</param>
+		<param name="force_logging" type="radio" default="0" label="COM_MAILSTER_FORCE_LOGGING"
+		    description="COM_MAILSTER_DEACTIVATES_CHECKS_WHETHER_LOG_FILE_DIR_IS_EXISTING">
+			<option value="0">COM_MAILSTER_JNO</option>
+			<option value="1">COM_MAILSTER_JYES</option>
+		</param>	
+	</params>	
+</config>

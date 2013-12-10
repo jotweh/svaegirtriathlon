@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $HeadURL: https://joomgallery.org/svn/joomgallery/JG-2.0/LF/trunk/de-de-informal.com_joomgallery/install.xml $  -->
+<!-- $Id: install.xml 3674 2012-03-04 13:34:00Z mab $  -->
+<extension version="1.7" type="file" client="both" method="upgrade">
+    <tag>de-DE</tag>
+    <name>JoomGallery informal de-DE</name>
+    <version>2.0</version>
+    <creationDate>2012-03-04</creationDate>
+    <author>JoomGallery::ProjectTeam</author>
+    <authorEmail>team@joomgallery.net</authorEmail>
+    <authorUrl>http://www.joomgallery.net/</authorUrl>
+    <copyright>Copyright (C) 2008 - 2012 JoomGallery::ProjectTeam. All rights reserved.</copyright>
+    <license>GNU General Public License</license>
+    <description><![CDATA[
+    <div align="center">
+      <table border="0" width="90%">
+        <tr>
+          <td width="100%" colspan="2">
+            <div align="center">
+              <h3>Deutsche Übersetzung (informal) für JoomGallery 2.0</h3>
+              <br /><strong>von: <a href="mailto:team@joomgallery.net">JoomGallery::ProjectTeam</a></strong>
+            </div>
+            <hr />
+          </td>
+        </tr>
+        <tr>
+          <td width="22%"><u><strong>Übersetzte Bereiche:</strong></u></td>
+          <td width="80%">Administrator (Backend) und Website (Frontend) incl. EXIF- und IPTC-Tags</td>
+        </tr>
+        <tr>
+          <td width="22%"><u><strong>&Uuml;bersetzungsversion:</strong></u></td>
+          <td width="80%">2.0</td>
+        </tr>
+        <td width="100%" colspan="2"><hr /></td>
+        <tr>
+          <td width="22%"><u><strong>JoomGallery-Website:</strong></u></td>
+          <td width="80%"><a href="http://www.joomgallery.net" target="_blank">http://www.joomgallery.net</a></td>
+        </tr>
+        </tr>
+        <td width="100%" colspan="2"><hr /></td>
+        <tr>
+      </table>
+    </div>]]></description>
+    <fileset>
+      <files folder="site" target="language/de-DE">
+        <filename>de-DE.com_joomgallery.exif.ini</filename>
+        <filename>de-DE.com_joomgallery.ini</filename>
+        <filename>de-DE.com_joomgallery.iptc.ini</filename>
+      </files>
+      <files folder="admin" target="administrator/language/de-DE">
+        <filename>de-DE.com_joomgallery.ini</filename>
+        <filename>de-DE.com_joomgallery.sys.ini</filename>
+      </files>
+    </fileset>
+</extension>

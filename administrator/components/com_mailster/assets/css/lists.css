@@ -1,0 +1,93 @@
+/**
+ * @package Joomla
+ * @subpackage Mailster
+ * @copyright (C) 2010 Holger Brandt IT Solutions
+ * @license GNU/GPL, see license.txt
+ * Mailster is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License 2
+ * as published by the Free Software Foundation.
+ * 
+ * Mailster is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with Mailster; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA
+ * or see http://www.gnu.org/licenses/.
+ */
+
+.outerPairListContainer{
+	width:750px;
+}
+
+.selListButton{
+	cursor:pointer;
+}
+
+
+.selectListPair{
+	width:750px;
+	height:380px;
+	padding:10px;
+}
+
+.pairListSelection{
+	width: 300px;
+	height: 340px;
+}
+
+.leftSelectList{
+	position:relative;
+	float:left;
+}
+
+.leftSelectListTitle{
+	color:red;
+	font-weight:bold;
+}
+
+.rightSelectList{
+	display:left;
+}
+
+.rightSelectListTitle{
+	color:red;
+	font-weight:bold;
+}
+
+.selectListFooter{
+	text-align:right;
+	height:20px;
+}
+
+.selectListFooter ul {
+	list-style:none;
+}
+
+.selectListFooter ul li{
+	display:inline;
+	padding-left:10px;
+}
+
+
+.selectListControl{
+	float:left;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+.selectListControl ul {
+	padding:0px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-top:50px;
+}
+
+.selectListControl ul li{
+	list-style:none;
+	padding:1px;
+}
+
+

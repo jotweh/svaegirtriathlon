@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="module" method="upgrade" client="site">
+    <name>Mailster Subscriber</name>    
+	<creationDate>January 2012</creationDate>
+	<author>Holger Brandt IT Solutions</author>
+	<authorEmail>info@brandt-solutions.de</authorEmail>
+	<authorUrl>www.brandt-solutions.de</authorUrl>
+	<copyright>(C) 2010 - 2012 Holger Brandt IT Solutions</copyright>
+	<license>This component is released under the GNU/GPL License</license>
+	<version>0.3.5</version>
+	<description>Subscriber Module of Mailster - For integrating subscribe and unsubscribe forms into module positions.</description>
+    <files>
+        <filename module="mod_mailster_subscriber">mod_mailster_subscriber.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>license.txt</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>        
+    </files>
+    <params>			
+		<param name="subscriber_type" type="list" default="subscribe" label="MOD_MAILSTER_FORM_CHOICE" description="MOD_MAILSTER_CHOOSE_BETWEEN_SUBSCRIBE_AND_UNSUBSCRIBE_FORM">
+			<option value="subscribe">MOD_MAILSTER_SUBSCRIBE_FORM</option>
+			<option value="unsubscribe">MOD_MAILSTER_UNSUBSCRIBE_FORM</option>
+		</param>
+		<param name="list_choice" type="sql" default="0" label="MOD_MAILSTER_LIST_CHOICE" query="SELECT '0' AS value, '- All lists -' AS list_choice UNION SELECT id AS value, name AS list_choice FROM #__mailster_lists WHERE allow_registration = '1'"  description="MOD_MAILSTER_LIST_CHOICE_ALL_LISTS_SELECTION_OF_MAILING_LIST" />
+		<param name="captcha" type="list" default="0" label="MOD_MAILSTER_ACTIVATE_CAPTCHA_PROTECTION" description="MOD_MAILSTER_ACTIVATE_CAPTCHA_PROTECTION_MAKE_SURE_THAT_YOU_ADDED_THE_API_KEYS_IN_MAILSTERS_CONIFG">
+			<option value="0">MOD_MAILSTER_JNO</option>
+			<option value="recaptcha">MOD_MAILSTER_CAPTCHA_RECAPTCHA</option>
+			<option value="mathcaptcha">MOD_MAILSTER_CAPTCHA_MATH</option>
+		</param>
+		<param name="design_choice" type="list" default="" label="MOD_MAILSTER_DESIGN_CHOICE" description="MOD_MAILSTER_DESIGN_PRESETS_CHOICE">
+			<option value="">MOD_MAILSTER_NONE_DESIGN</option>
+			<option value="black">MOD_MAILSTER_BLACK_DESIGN</option>
+			<option value="blue">MOD_MAILSTER_BLUE_DESIGN</option>
+			<option value="red">MOD_MAILSTER_RED_DESIGN</option>
+			<option value="white">MOD_MAILSTER_WHITE_DESIGN</option>
+		</param>
+		<param name="prefix_class" type="text" default="mailster_subscriber_" size="50" label="MOD_MAILSTER_CSS_PREFIX_CLASS" description="MOD_MAILSTER_CSS_PREFIX_CLASS_OF_THE_SUBSCRIPTION_BOX_ONLY_ACTIVE_WITHOUT_DESIGN_CHOICE" />
+		<param name="list_label" type="text" default="NEWSLETTER" size="50" label="MOD_MAILSTER_MAILING_LIST_LABEL" description="MOD_MAILSTER_MAILING_LIST_LABEL_FOR_LIST_NAME_OR_LIST_CHOICE" />
+		<param name="hide_list_name" type="radio" default="0" label="MOD_MAILSTER_HIDE_LIST_NAME" description="MOD_MAILSTER_HIDE_MAILING_LIST_NAME">
+			<option value="0">MOD_MAILSTER_JNO</option>
+			<option value="1">MOD_MAILSTER_JYES</option>
+		</param>
+		<param type="spacer" name="a" label="" default="" />	
+		<param name="subscriber_smart_hide" type="radio" default="0" label="MOD_MAILSTER_SMART_HIDE" description="MOD_MAILSTER_HIDE_SUBSCRIBE_FORM_WHEN_USER_IS_ALREADY_SUBSCRIBED_TO_MAILING_LIST">
+			<option value="0">MOD_MAILSTER_JNO</option>
+			<option value="1">MOD_MAILSTER_JYES</option>
+		</param>			
+		<param name="subscribe_header" type="text" default="SUBSCRIBE TO THE NEWSLETTER" size="50" label="MOD_MAILSTER_SUBSCRIPTION_BOX_HEADER" description="MOD_MAILSTER_SUBSCRIPTION_BOX_HEADER" />
+		<param name="hide_subscriber_name" type="radio" default="0" label="MOD_MAILSTER_NO_SUBSCRIBER_NAME" description="MOD_MAILSTER_HIDE_SUBSRIBER_NAME_FIELD_DO_MOD_MAILSTER_JNOT_REQUIRE_A_NAME">
+			<option value="0">MOD_MAILSTER_JNO</option>
+			<option value="1">MOD_MAILSTER_JYES</option>
+		</param>
+		<param name="subscriber_name" type="text" default="NAME" size="50" label="MOD_MAILSTER_SUBSCRIBER_NAME_LABEL" description="MOD_MAILSTER_SUBSCRIBER_NAME_FIELD_LABEL" />
+		<param name="subscriber_email" type="text" default="EMAIL" size="50" label="MOD_MAILSTER_SUBSCRIBER_EMAIL_LABEL" description="MOD_MAILSTER_SUBSCRIBER_EMAIL_FIELD_LABEL" />
+		<param name="subscribe_button" type="text" default="SUBSCRIBE" size="50" label="MOD_MAILSTER_SUBSCRIBE_BUTTON_LABEL" description="MOD_MAILSTER_SUBSCRIBE_BUTTON_LABEL" />	
+		<param name="subscribe_thank_msg" type="text" default="THANK YOU FOR SUBSCRIBING" size="50" label="MOD_MAILSTER_SUBSCRIPTION_OK_TEXT" description="MOD_MAILSTER_SUBSCRIPTION_SUCCESSFULL_MESSAGE" />
+		<param name="subscribe_error_msg" type="text" default="SUBSCRIPTION ERROR OCCURED PLEASE TRY AGAIN" size="50" label="MOD_MAILSTER_SUBSCRIPTION_ERROR_TEXT" description="MOD_MAILSTER_SUBSCRIPTION_FAILED_MESSAGE" />	
+		<param type="spacer" name="b" label="" default="" />
+		<param name="unsubscriber_smart_hide" type="radio" default="0" label="MOD_MAILSTER_SMART_HIDE" description="MOD_MAILSTER_HIDE_UNSUBSCRIBE_FORM_WHEN_USER_IS_ALREADY_SUBSCRIBED_TO_MAILING_LIST">
+			<option value="0">MOD_MAILSTER_JNO</option>
+			<option value="1">MOD_MAILSTER_JYES</option>
+		</param>			
+		<param name="unsubscribe_header" type="text" default="UNSUBSCRIBE FROM NEWSLETTER" size="50" label="MOD_MAILSTER_UNSUBSCRIPTION_BOX_HEADER" description="MOD_MAILSTER_UNSUBSCRIPTION_BOX_HEADER" />
+		<param name="unsubscriber_email" type="text" default="EMAIL" size="50" label="MOD_MAILSTER_UNSUBSCRIBER_EMAIL_LABEL" description="MOD_MAILSTER_UNSUBSCRIBER_EMAIL_FIELD_LABEL" />
+		<param name="unsubscribe_button" type="text" default="UNSUBSCRIBE" size="50" label="MOD_MAILSTER_UNSUBSCRIBE_BUTTON_LABEL" description="MOD_MAILSTER_UNSUBSCRIBE_BUTTON_LABEL" />	
+		<param name="unsubscribe_thank_msg" type="text" default="SORRY THAT YOU DECIDED TO UNSUBSCRIBE HOPE TO SEE YOU AGAIN IN THE FUTURE" size="50" label="MOD_MAILSTER_UNSUBSCRIPTION_OK_TEXT" description="MOD_MAILSTER_UNSUBSCRIPTION_SUCCESSFULL_MESSAGE" />
+		<param name="unsubscribe_error_msg" type="text" default="UNSUBSCRIPTION ERROR OCCURED PLEASE TRY AGAIN" size="50" label="MOD_MAILSTER_UNSUBSCRIPTION_ERROR_TEXT" description="MOD_MAILSTER_UNSUBSCRIPTION_FAILED_MESSAGE" />	
+		<param type="spacer" name="c" label="" default="" />	
+    </params>
+    <config>   
+		<fields name="params">
+			<fieldset name="basic">			
+				<field name="subscriber_type" type="list" default="subscribe" label="MOD_MAILSTER_FORM_CHOICE" description="MOD_MAILSTER_CHOOSE_BETWEEN_SUBSCRIBE_AND_UNSUBSCRIBE_FORM">
+					<option value="subscribe">MOD_MAILSTER_SUBSCRIBE_FORM</option>
+					<option value="unsubscribe">MOD_MAILSTER_UNSUBSCRIBE_FORM</option>
+				</field>
+				<field name="list_choice" type="sql" default="0" label="MOD_MAILSTER_LIST_CHOICE" query="SELECT '0' AS value, '- All lists -' AS list_choice UNION SELECT id AS value, name AS list_choice FROM #__mailster_lists WHERE allow_registration = '1'" />
+				<field name="captcha" type="list" default="0" label="MOD_MAILSTER_ACTIVATE_CAPTCHA_PROTECTION" description="MOD_MAILSTER_ACTIVATE_CAPTCHA_PROTECTION_MAKE_SURE_THAT_YOU_ADDED_THE_API_KEYS_IN_MAILSTERS_CONIFG">
+					<option value="0">MOD_MAILSTER_JNO</option>
+					<option value="recaptcha">MOD_MAILSTER_CAPTCHA_RECAPTCHA</option>
+					<option value="mathcaptcha">MOD_MAILSTER_CAPTCHA_MATH</option>
+				</field>
+				<field name="design_choice" type="list" default="" label="MOD_MAILSTER_DESIGN_CHOICE" description="MOD_MAILSTER_DESIGN_PRESETS_CHOICE">
+					<option value="">MOD_MAILSTER_NONE_DESIGN</option>
+					<option value="black">MOD_MAILSTER_BLACK_DESIGN</option>
+					<option value="blue">MOD_MAILSTER_BLUE_DESIGN</option>
+					<option value="red">MOD_MAILSTER_RED_DESIGN</option>
+					<option value="white">MOD_MAILSTER_WHITE_DESIGN</option>
+				</field>
+				<field name="prefix_class" type="text" default="mailster_subscriber_" size="50" label="MOD_MAILSTER_CSS_PREFIX_CLASS" description="MOD_MAILSTER_CSS_PREFIX_CLASS_OF_THE_SUBSCRIPTION_BOX_ONLY_ACTIVE_WITHOUT_DESIGN_CHOICE" />
+				<field name="list_label" type="text" default="NEWSLETTER" size="50" label="MOD_MAILSTER_MAILING_LIST_LABEL" description="MOD_MAILSTER_MAILING_LIST_LABEL_FOR_LIST_NAME_OR_LIST_CHOICE" />
+				<field name="hide_list_name" type="radio" default="0" label="MOD_MAILSTER_HIDE_LIST_NAME" description="MOD_MAILSTER_HIDE_MAILING_LIST_NAME">
+					<option value="0">MOD_MAILSTER_JNO</option>
+					<option value="1">MOD_MAILSTER_JYES</option>
+				</field>
+				<field type="spacer" name="a" label="" default="" />	
+				<field name="subscriber_smart_hide" type="radio" default="0" label="MOD_MAILSTER_SMART_HIDE" description="MOD_MAILSTER_HIDE_SUBSCRIBE_FORM_WHEN_USER_IS_ALREADY_SUBSCRIBED_TO_MAILING_LIST">
+					<option value="0">MOD_MAILSTER_JNO</option>
+					<option value="1">MOD_MAILSTER_JYES</option>
+				</field>			
+				<field name="subscribe_header" type="text" default="SUBSCRIBE TO THE NEWSLETTER" size="50" label="MOD_MAILSTER_SUBSCRIPTION_BOX_HEADER" description="MOD_MAILSTER_SUBSCRIPTION_BOX_HEADER" />
+				<field name="hide_subscriber_name" type="radio" default="0" label="MOD_MAILSTER_NO_SUBSCRIBER_NAME" description="MOD_MAILSTER_HIDE_SUBSRIBER_NAME_FIELD_DO_MOD_MAILSTER_JNOT_REQUIRE_A_NAME">
+					<option value="0">MOD_MAILSTER_JNO</option>
+					<option value="1">MOD_MAILSTER_JYES</option>
+				</field>
+				<field name="subscriber_name" type="text" default="NAME" size="50" label="MOD_MAILSTER_SUBSCRIBER_NAME_LABEL" description="MOD_MAILSTER_SUBSCRIBER_NAME_FIELD_LABEL" />
+				<field name="subscriber_email" type="text" default="EMAIL" size="50" label="MOD_MAILSTER_SUBSCRIBER_EMAIL_LABEL" description="MOD_MAILSTER_SUBSCRIBER_EMAIL_FIELD_LABEL" />
+				<field name="subscribe_button" type="text" default="SUBSCRIBE" size="50" label="MOD_MAILSTER_SUBSCRIBE_BUTTON_LABEL" description="MOD_MAILSTER_SUBSCRIBE_BUTTON_LABEL" />	
+				<field name="subscribe_thank_msg" type="text" default="THANK YOU FOR SUBSCRIBING" size="50" label="MOD_MAILSTER_SUBSCRIPTION_OK_TEXT" description="MOD_MAILSTER_SUBSCRIPTION_SUCCESSFULL_MESSAGE" />
+				<field name="subscribe_error_msg" type="text" default="SUBSCRIPTION ERROR OCCURED PLEASE TRY AGAIN" size="50" label="MOD_MAILSTER_SUBSCRIPTION_ERROR_TEXT" description="MOD_MAILSTER_SUBSCRIPTION_FAILED_MESSAGE" />	
+				<field type="spacer" name="b" label="" default="" />
+				<field name="unsubscriber_smart_hide" type="radio" default="0" label="MOD_MAILSTER_SMART_HIDE" description="MOD_MAILSTER_HIDE_UNSUBSCRIBE_FORM_WHEN_USER_IS_ALREADY_SUBSCRIBED_TO_MAILING_LIST">
+					<option value="0">MOD_MAILSTER_JNO</option>
+					<option value="1">MOD_MAILSTER_JYES</option>
+				</field>			
+				<field name="unsubscribe_header" type="text" default="UNSUBSCRIBE FROM NEWSLETTER" size="50" label="MOD_MAILSTER_UNSUBSCRIPTION_BOX_HEADER" description="MOD_MAILSTER_UNSUBSCRIPTION_BOX_HEADER" />
+				<field name="unsubscriber_email" type="text" default="EMAIL" size="50" label="MOD_MAILSTER_UNSUBSCRIBER_EMAIL_LABEL" description="MOD_MAILSTER_UNSUBSCRIBER_EMAIL_FIELD_LABEL" />
+				<field name="unsubscribe_button" type="text" default="UNSUBSCRIBE" size="50" label="MOD_MAILSTER_UNSUBSCRIBE_BUTTON_LABEL" description="MOD_MAILSTER_UNSUBSCRIBE_BUTTON_LABEL" />	
+				<field name="unsubscribe_thank_msg" type="text" default="SORRY THAT YOU DECIDED TO UNSUBSCRIBE HOPE TO SEE YOU AGAIN IN THE FUTURE" size="50" label="MOD_MAILSTER_UNSUBSCRIPTION_OK_TEXT" description="MOD_MAILSTER_UNSUBSCRIPTION_SUCCESSFULL_MESSAGE" />
+				<field name="unsubscribe_error_msg" type="text" default="UNSUBSCRIPTION ERROR OCCURED PLEASE TRY AGAIN" size="50" label="MOD_MAILSTER_UNSUBSCRIPTION_ERROR_TEXT" description="MOD_MAILSTER_UNSUBSCRIPTION_FAILED_MESSAGE" />	
+				<field type="spacer" name="c" label="" default="" />
+			</fieldset>
+		</fields>
+	</config>
+	<languages>
+   		<language tag="en-GB">language/en-GB.mod_mailster_subscriber.ini</language>
+   		<language tag="de-DE">language/de-DE.mod_mailster_subscriber.ini</language>
+   		<language tag="fr-FR">language/fr-FR.mod_mailster_subscriber.ini</language>
+	</languages>
+</install>

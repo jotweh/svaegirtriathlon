@@ -1,0 +1,61 @@
+/**
+ * @package Joomla
+ * @subpackage Mailster
+ * @copyright (C) 2010 Holger Brandt IT Solutions
+ * @license GNU/GPL, see license.txt
+ * Mailster is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License 2
+ * as published by the Free Software Foundation.
+ * 
+ * Mailster is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with Mailster; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA
+ * or see http://www.gnu.org/licenses/.
+ */
+ 
+ #tabContainer ul.tabNavigation{
+	padding: 0px;
+	margin: 5px;	
+}
+
+#tabContainer ul.tabNavigation li{
+	list-style: none;
+	display: inline;
+}
+
+#tabContainer ul li.tabNavigationSpacer{
+	padding-left:10px;
+	padding-right:10px;	
+}
+
+#tabContainer ul li a.selected{
+	color: black;
+	text-decoration: underline;
+}
+
+#tabContainer ul.tabNavigation li a{
+	border-right: 1px solid #CCCCCC;
+	cursor: pointer;
+	font-weight: bold;
+	height: 12px;
+	line-height: 12px;
+	padding: 0 15px;
+}
+
+#tabContainer ul li a:hover{
+	color: black;
+}
+
+div table.tabContentTbl{
+	width:850px;
+	min-height:350px;
+}
+
+div table.tabContentTbl tr td{
+	padding-top:10px;
+}

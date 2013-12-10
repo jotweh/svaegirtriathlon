@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.0" method="upgrade">
+	<name>Mailster</name>
+	<author>Holger Brandt IT Solutions</author>
+	<creationDate>January 2012</creationDate>
+	<copyright>(C) 2010 - 2012 Holger Brandt IT Solutions</copyright>
+	<license>This component is released under the GNU/GPL License</license>
+	<authorEmail>info@brandt-solutions.de</authorEmail>
+	<authorUrl>www.brandt-solutions.de</authorUrl>
+	<version>0.3.6</version>
+	<description>COM_MAILSTER_COMPONENT_DESCRIPTION</description>
+	<install>
+		<sql>
+			<file charset="utf8" driver="mysql">install.utf8.sql</file>
+			<file driver="mysql">install.sql</file>
+			<file charset="utf8" driver="mysqli">install.utf8.sql</file>
+			<file driver="mysqli">install.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file charset="utf8" driver="mysql">uninstall.sql</file>
+			<file driver="mysql">uninstall.sql</file>
+			<file charset="utf8" driver="mysqli">uninstall.sql</file>
+			<file driver="mysqli">uninstall.sql</file>
+		</sql>
+	</uninstall>
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>Controller.php</filename>
+		<filename>mailster.php</filename>	
+		<folder>controllers</folder>	
+		<folder>views</folder>	
+    </files>
+	<languages>
+		<language tag="en-GB">language/site/en-GB/en-GB.com_mailster.ini</language>
+		<language tag="de-DE">language/site/de-DE/de-DE.com_mailster.ini</language>
+		<language tag="fr-FR">language/site/fr-FR/fr-FR.com_mailster.ini</language>
+	</languages>
+	<administration>
+		<menu img="../administrator/components/com_mailster/assets/images/16-menu-icon-mailster.png" link="option=com_mailster">Mailster</menu>
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>license.txt</filename>
+			<filename>config.xml</filename>
+			<filename>version.properties</filename>
+			<filename>com.properties</filename>
+			<filename>Controller.php</filename>
+			<filename>install.sql</filename>
+			<filename>install.utf8.sql</filename>
+			<filename>uninstall.sql</filename>
+			<filename>admin.mailster.php</filename>	
+			<folder>assets</folder>
+			<folder>controllers</folder>	
+			<folder>extensions</folder>		
+			<folder>mailster</folder>
+			<folder>models</folder>
+			<folder>tables</folder>
+			<folder>views</folder>	
+		</files>
+		<files>
+			<filename>script.mailster.php</filename> <!-- For Joomla! 1.5 -->		
+		</files>
+		<languages>
+			<language tag="en-GB">language/admin/en-GB/en-GB.com_mailster.ini</language>
+			<language tag="en-GB">language/admin/en-GB/en-GB.com_mailster.sys.ini</language>
+			<language tag="de-DE">language/admin/de-DE/de-DE.com_mailster.ini</language>
+			<language tag="de-DE">language/admin/de-DE/de-DE.com_mailster.sys.ini</language>
+			<language tag="fr-FR">language/admin/fr-FR/fr-FR.com_mailster.ini</language>
+			<language tag="fr-FR">language/admin/fr-FR/fr-FR.com_mailster.sys.ini</language>
+		</languages>
+	</administration>
+	<installfile>install.mailster.php</installfile>	
+	<uninstallfile>uninstall.mailster.php</uninstallfile>
+	<scriptfile>script.mailster.php</scriptfile>
+</install>

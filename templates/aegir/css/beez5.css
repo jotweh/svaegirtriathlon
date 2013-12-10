@@ -1,0 +1,1082 @@
+/*
+ * @author ( Angie Radtke )
+*/
+
+/* not ready */
+
+/* ##########################  general  ########################### */
+
+/*@font-face {
+	font-family: 'Titillium Maps';
+	src: url("../fonts/TitilliumMaps29L002.eot");
+	src: local('Titillium Maps'), local('TitilliumMaps'),
+		url("../fonts/TitilliumMaps29L002.otf") format("opentype"),
+		url("../fonts/TitilliumMaps29L002.woff") format("woff");
+}*/
+
+body {
+    color: #456;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url('/triathlon/templates/aegir/images/debut_light.png');
+}
+
+#all {
+    color: #333;
+    border: solid 0px #ddd !important;
+
+}
+
+a:link,
+a:visited {
+    color: #0F398D;
+    text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #008AB1;
+}
+
+fieldset {
+    border: solid 0px #ccc
+}
+
+.article-info {
+    color: #444;
+}
+
+.article-info dd span {
+    color: #444;
+    border-right: solid 0px;
+
+}
+
+/* ##########################  logo  ########################### */
+#header {
+    background: transparant;
+}
+
+#logo span {
+    color: #555;
+    margin-top: 6px;
+    font-size: 0.4em;
+    letter-spacing: 1px
+}
+
+#header-image {
+    min-height: 20px;
+    background: #eee
+}
+
+#line {
+    /*display: none;*/
+    text-align: right;
+    margin-bottom: 10px;
+    padding-right: 20px
+}
+
+#header #line form,
+#header #line #fontsize,
+#header #line form .search
+#header #line form .finder {
+    display: inline !important;
+}
+
+/* ##########################  header  ########################### */
+
+/* ++++++++++++++  lists, skiplinks  ++++++++++++++ */
+
+#header ul.menu li {
+    border: 0
+}
+
+/*#header ul.menu li.active a:link,
+#header ul.menu li.active a:visited
+{
+color:#fff;
+border-right:solid 1px #237D85;
+background:#0F398D !important
+}*/
+
+#header ul.skiplinks {
+    width: 100%
+}
+
+.skiplinks,
+.skiplinks li {
+    border: solid 0px #000;
+}
+
+#header ul.skiplinks {
+    width: 100%;
+    text-align: left;
+    background: none;
+    z-index: 20000;
+    top: 0;
+    display: inline;
+    padding: 0
+}
+
+#header ul.skiplinks li a.u2:active,
+#header ul.skiplinks li a.u2:focus {
+    background: #333 !important;
+    color: #fff !important;
+    border: solid 1px;
+    top: 0px !important;
+    z-index: 10000000 !important;
+    left: 10px !important;
+    display: block;
+    width: 14em;
+    display: block
+}
+
+/* ++++++++++++++  fontsize  ++++++++++++++ */
+
+#fontsize {
+    color: #444;
+}
+
+#fontsize p a:link,
+#fontsize p a:visited {
+    color: #444
+}
+
+#fontsize p a:hover,
+#fontsize p a:active,
+#fontsize p a:focus {
+    background: #555;
+    color: #fff
+}
+
+#fontsize h3 {
+    color: #444;
+}
+
+/* ++++++++++++++  search  ++++++++++++++ */
+
+#header form .inputbox {
+    background: #fff !important;
+}
+
+/* ##########################  contentarea  ########################### */
+
+#top {
+    background: #eee;
+    padding: 15px;
+    border: solid 1px #ddd
+}
+
+/* ##########################  breadcrumbs  ########################### */
+
+#breadcrumbs {
+    color: #555;
+}
+
+#breadcrumbs span {
+    color: #555;
+}
+
+#breadcrumbs span a:link,
+#breadcrumbs span a:visited {
+    background: #fff;
+    color: #0F398D;
+}
+
+#breadcrumbs span a:hover,
+#breadcrumbs span a:active,
+#breadcrumbs span a:focus {
+    background: #0F398D;
+    color: #fff;
+}
+
+/* ##########################  navigation column  ########################### */
+
+.module_content {
+    border: solid 1px #ddd;
+    background: #fff
+}
+
+.moduletable_js {
+    border: solid 0px #ddd;
+}
+
+#right .moduletable_js {
+    border: 0
+}
+
+#nav h3 {
+    border-bottom: solid 1px #ddd;
+    color: #444;
+}
+
+h3.js_heading {
+    border-bottom: solid 1px #fff !important;
+    background: #eee;
+    /*font-family: Arial;*/
+}
+
+h3.js_heading span.backh {
+    border: solid 0px #000
+}
+
+h3.js_heading span.backh1 {
+    color: #444
+}
+
+#right h3 {
+    color: #0F398D;
+}
+
+#right h3 span.backh {
+
+}
+
+#right h3 span.backh2 {
+
+}
+
+#right h3 span.backh3 {
+
+}
+
+h3.js_heading a {
+    border: 0
+}
+
+h3.js_heading a img {
+    border: 0
+}
+
+h3.js_heading a.opencloselink:hover,
+h3.js_heading a.opencloselink:active,
+h3.js_heading a.opencloselink:focus {
+    background: none
+}
+
+h3.js_heading a:link,
+h3.js_heading a:visited,
+h3.js_heading a:hover,
+h3.js_heading a:active,
+h3.js_heading a:focus {
+
+}
+
+/*#nav h3
+{
+	font-family: 'Titillium Maps', Arial;
+}*/
+
+#nav h3.js_heading a:focus {
+
+}
+
+#nav form {
+    color: #000;
+}
+
+#nav form a:hover,
+#nav form a:active,
+#nav form a:focus {
+    color: #fff;
+    background: #669933;
+}
+
+/* ++++++++++++++  first level  ++++++++++++++ */
+#nav .moduletable-example ul.menu {
+    background: #fff;
+    border: 0;
+}
+
+ul.menu {
+    border: 0;
+}
+
+.module_content ul.menu {
+    border: 0;
+}
+
+ul.menu li.active a:link,
+ul.menu li.active a:visited {
+    color: #333;
+    text-decoration: none;
+}
+
+/* ++++++++++++++  second level  ++++++++++++++ */
+
+ul.menu li ul {
+    border: solid 0px #eee;
+}
+
+ul.menu li.active ul li a:link,
+ul.menu li.active ul li a:visited {
+}
+
+ul.menu li.active ul li.active a:link,
+ul.menu li.active ul li.active a:visited {
+    border: 0;
+    color: #333;
+    border-bottom: solid 1px #fff;
+}
+
+/* ul.menu li.active ul li a:hover,
+ ul.menu li.active ul li a:active,
+ ul.menu li.active ul li a:focus
+{
+	background:#666 !important;
+	color:#fff !important;
+}*/
+
+/* ++++++++++++++  fourth level  ++++++++++++++ */
+
+ul.menu li ul li ul li ul {
+    border: solid 1px #eee !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    background: #fff url(../images/level4.png) repeat-x !important;
+}
+
+ul.menu li.active ul li.active ul li.active ul li a:link,
+ul.menu li.active ul li.active ul li.active ul li a:visited {
+    font-weight: normal;
+    padding: 3px 2px 3px 40px;
+    font-size: 0.9em;
+    background: #fff url(../images/arrow_small.png) no-repeat 30px 5px;
+    color: #444
+}
+
+ul.menu li.active ul li.active ul li.active ul li.active a:link,
+ul.menu li.active ul li.active ul li.active ul li.active a:visited {
+    font-weight: bold;
+    color: #333
+}
+
+/* ++++++++++++++  fifth level  ++++++++++++++ */
+/* TODO das hier entfernen. So viele levels wird es nie geben */
+
+ul.menu li ul li ul li ul li ul {
+    border: solid 0px #eee !important;
+    padding-top: 5px !important;
+    padding-bottom: 10px !important;
+    background: #fff url(../images/level4.png) repeat-x !important;
+}
+
+ul.menu li.active ul li.active ul li.active ul li.active ul li a:link,
+ul.menu li.active ul li.active ul li.active ul li.active ul li a:visited {
+    font-weight: normal;
+    padding: 3px 2px 3px 5px;
+    font-size: 0.9em;
+    background: #fff;
+    color: #444;
+    margin: 0 10px 0 35px;
+    border-bottom: solid 1px #ddd
+}
+
+ul.menu li.active ul li.active ul li.active ul li.active ul li.active a:link,
+ul.menu li.active ul li.active ul li.active ul li.active ul li.active a:visited {
+    font-weight: bold;
+    color: #333
+}
+
+/* ##########################  content - main   ########################### */
+
+#main {
+
+    min-height: 300px
+
+}
+
+#main a:hover,
+#main a:active,
+#main a:focus {
+    text-decoration: none;
+    color: #008AB1;
+}
+
+.items-row {
+
+}
+
+.column-1,
+.column-2 {
+    border: solid 0px;
+}
+
+#main ul li {
+
+}
+
+.small {
+    border: solid 0;
+}
+
+ul#archive-items li.row0,
+ul#archive-items li.row1 {
+    border-bottom: solid 1px #ddd
+}
+
+.archive #adminForm fieldset {
+    border: 0;
+    padding: 0;
+    margin: 20px 0
+}
+
+/* ++++++++++++++  images  ++++++++++++++ */
+
+.image-left {
+    padding: 2px;
+}
+
+.image-right {
+    border: solid 1px #ddd;
+    padding: 2px
+}
+
+/* ++++++++++++++  leading  ++++++++++++++ */
+
+.items-row {
+
+}
+
+/* ++++++++++++++++++++ headings +++++++++++++ */
+
+#main h1 {
+    color: #444;
+    border-top: solid 0px #ddd;
+    border-bottom: solid 1px #ddd;
+    /*	 font-family: 'Titillium Maps', Arial;*/
+
+}
+
+/* h1 on frontpage */
+/*
+#main .blog-featured h1
+{
+	border-top:solid 0px #ddd;
+	border-bottom:solid 0px #ddd;
+}
+*/
+/*.items-row h2
+{
+	color:#0F398D;
+	border-top:solid 1px #ddd;
+	border-bottom:solid 1px #ddd;
+}*/
+.items-row h2 a:link,
+.items-row h2 a:visited,
+.items-leading h2 a:link,
+.items-leading h2 a:visited {
+    color: #0F398D !important;
+}
+
+.items-row h2 a:hover,
+.items-row h2 a:active,
+.items-row h2 a:focus,
+.items-leading h2 a:hover,
+.items-leading h2 a:active,
+.items-leading h2 a:focus {
+    color: #fff !important;
+    text-decoration: none !important
+}
+
+#main h2 a {
+    color: #333;
+}
+
+/* ++++++++++++++  readmore  ++++++++++++++ */
+
+.readmore a:hover,
+.readmore a:active,
+.readmore a:focus,
+a.readmore a:hover,
+a.readmore a:active,
+a.readmore a:focus {
+    color: #fff;
+}
+
+/* ++++++++++++++  icons  ++++++++++++++ */
+
+.actions img {
+    border: 0;
+}
+
+/* ++++++++++++++  items-more  ++++++++++++++ */
+
+#main .items-more h3 {
+    border-bottom: solid 1px #ddd;
+    border-top: solid 1px #ddd;
+    color: #444;
+}
+
+#main .items-more ol {
+    color: #000;
+}
+
+#main .items-more ol li a {
+    background: #FFF url(../images/blog_more.gif) no-repeat !important;
+    color: #0F398D /* #377A2E */
+}
+
+#main .items-more ol li a:hover,
+#main .items-more ol li a:active,
+#main .items-more ol li a:focus {
+    background: #555 url(../images/arrow2.gif) no-repeat 0px center;
+    color: #333;
+}
+
+/* ++++++++++++++  pagination  ++++++++++++++ */
+
+#main .pagination {
+    border-top: solid 1px #ddd;
+}
+
+/* ++++++++++++++  article index  ++++++++++++++ */
+
+table.contenttoc {
+    border: solid 1px #ccc;
+}
+
+/* ##########################  right column   ########################### */
+
+#right {
+
+}
+
+#right .moduletable {
+    border: solid 0px #eee;
+    border-top: 0;
+}
+
+#right h4 {
+    color: #444;
+    border: solid 0;
+}
+
+#right ul {
+    border: solid 0 #ccc;
+}
+
+.moduletable-custom ul li {
+    color: #333;
+    background: url(../images/arrow2_grey.png) no-repeat 2px 7px;
+}
+
+#right .moduletable-custom h4 {
+    color: #444
+}
+
+#right .moduletable a img {
+    border: 0
+}
+
+/* ++++++++++++++  button for closing right column  ++++++++++++++ */
+#close span {
+    color: #000;
+}
+
+/* ##########################  modules  ########################### */
+
+/* ++++++++++++++  mostread, latest news ++++++++++++++ */
+
+.mostread li a:link,
+.mostread li a:visited,
+.latestnews li a:link,
+.latestnews li a:visited {
+    background: url(../images/arrow2_grey.png) 2px 7px no-repeat;
+}
+
+.mostread li a:hover,
+.latestnews li a:hover,
+.mostread li a:active,
+.latestnews li a:active,
+.mostread li a:focus,
+.latestnews li a:focus {
+    background: #555 url(../images/arrow_white_grey.png) 2px 6px no-repeat !important;
+}
+
+/* ++++++++++++++  newsfeed  ++++++++++++++ */
+
+ul.newsfeed {
+    border: solid 0px #000;
+}
+
+.newsfeed-item {
+    border-bottom: solid 1px #ddd;
+}
+
+.newsfeed-item h5 a {
+
+}
+
+/* ++++++++++++++  newsflash  ++++++++++++++ */
+/* newsflash horizontal */
+
+ul.newsflash-horiz {
+    border: solid 1px #eee;
+    background: #f5f5f5 url(../images/box.png) repeat-x;
+}
+
+.newsflash-horiz li {
+    border: solid 0px #eee;
+    background: #f5f5f5;
+}
+
+ul.newsflash-horiz li h4 {
+    border-bottom: solid 1px #fff;
+    /*font-family: 'Titillium Maps', Arial;*/
+}
+
+/* newsflash vertical */
+
+.newsflash-vert {
+
+}
+
+/* ++++++++++++++  banner  ++++++++++++++ */
+
+.banneritem {
+    border: 0
+}
+
+.banneritem a {
+    background: none
+}
+
+.banneritem a img {
+    background: none;
+    border: 0
+}
+
+/* ++++++++++++++  login  ++++++++++++++ */
+
+/*#login-form .inputbox
+{
+	border:solid 1px #ddd;
+	background:url(../images/content_bg.gif) repeat-x;
+}*/
+
+fieldset.input {
+    border: 0;
+}
+
+/* ++++++++++++++  tabs/ slide  ++++++++++++++ */
+
+ul.tabs {
+    border: solid 1px #ddd;
+    border-bottom: 0;
+    background: #f5f5f5 url(../images/box.png) repeat-x;
+}
+
+ul.tabs li {
+    background: #f5f5f5 url(../images/box.png) repeat-x;
+    border-right: solid 1px #ddd
+}
+
+ul.tabs li a:link,
+ul.tabs li a:visited {
+    color: #333;
+}
+
+ul.tabs li a:hover,
+ul.tabs li a:active,
+ul.tabs li a:focus {
+    color: #000
+}
+
+.tabcontent {
+    border: solid 1px #ddd;
+    background: #fff;
+    color: #000;
+}
+
+.tabcontent .linkclosed {
+    color: #000;
+    border-bottom: solid 1px #e5e5e5;
+}
+
+ul.tabs li a.linkopen {
+    background: #fff;
+    color: #333;
+    border: 0
+}
+
+ul.tabs li a.linkclosed:hover,
+ul.tabs li a.linkclosed:active,
+ul.tabs li a.linkclosed:focus,
+ul.tabs li a.linkopen:hover,
+ul.tabs li a.linkopen:active,
+ul.tabs li a.linkopen:focus {
+    background: #555;
+    color: #fff
+}
+
+/* ++++++++++++++  category-module  ++++++++++++++ */
+
+.category-module li {
+    border-bottom: solid 1px #ddd;
+}
+
+.category-module li li {
+    border: 0
+}
+
+/* ##########################  search   ########################### */
+
+.searchintro img {
+    border: 0px
+}
+
+.word {
+    background: #fff;
+    border: solid 0px #ccc;
+}
+
+.word input {
+    background: #fff;
+    border: solid 1px #999;
+    color: #444;
+}
+
+.only {
+    border: solid 1px #ccc;
+}
+
+.phrases {
+    border: solid 1px #ccc;
+}
+
+/* ++++++++++++++  selects  ++++++++++++++ */
+.phrases .inputbox {
+    background: #fff;
+    color: #000;
+}
+
+.phrases .inputbox option {
+    background: #f5f5f5;
+    border-bottom: solid 1px #ccc;
+}
+
+.phrases .inputbox option a:hover {
+    background: #C00;
+    border-color: #CFD0D6;
+    color: #fff;
+}
+
+/* ++++++++++++++  search results	++++++++++++++++++ */
+
+dl.search-results {
+    background: #f5f5f5;
+}
+
+dl.search-results dt.result-title {
+    border-top: dotted 1px #ddd
+}
+
+dl.search-results dd.result-url {
+    border-bottom: solid 5px #fff;
+    color: #115599;
+}
+
+dl.search-results dd.result-created {
+    border-bottom: solid 5px #fff;
+}
+
+/* ##########################  forms   ########################### */
+
+/* ++++++++++++++  form validation  ++++++++++++++ */
+
+.invalid {
+    border-color: red !important;
+}
+
+label.invalid {
+    color: red;
+}
+
+/* ##########################  user profile  ########################### */
+
+#users-profile-core,
+#users-profile-custom {
+    border: solid 1px #ccc;
+}
+
+#member-profile fieldset {
+    border: solid 1px #ccc;
+}
+
+/* ##########################  tables   ########################### */
+table {
+    border: solid 1px #ddd !important
+}
+
+tbody {
+
+}
+
+tr.odd,
+.cat-list-row1 {
+    background: url(../images/news.gif) repeat-x;
+}
+
+table.newsfeeds td,
+table.weblinks td {
+
+}
+
+table.weblinks th,
+table.newsfeeds th,
+table.category th,
+table.jlist-table th {
+    /* aegir colors */
+    background: #D9E8EC;
+    color: #0F398D;
+}
+
+/*table.weblinks th a,
+table.newsfeeds th a,
+table.category th a,
+table.jlist-table th a
+{
+	color:#fff !important
+}*/
+
+td.table_footer {
+    background: #ddd url(../images/table_footer.gif) bottom left repeat-x;
+}
+
+td.counter {
+
+}
+
+td.num,
+td.hits {
+
+}
+
+td p {
+
+}
+
+table.category th a img {
+    border: solid 0px;
+}
+
+/* for opera */
+tr, td {
+    border: solid 1px #ddd
+}
+
+fieldset.filters {
+    border: 0;
+}
+
+/* ++++++++++++++  Error Message contact form  ++++++++++++++ */
+
+p.error {
+    color: #044b63;
+    background: #eee;
+    border-top: 3px solid #044b63;
+    border-bottom: 3px solid #044b63;
+}
+
+body.contentpane {
+    background: #fff;
+}
+
+/* ##########################  footer   ########################### */
+
+#footer {
+    color: #fff;
+    border-top: solid 0px #ccc;
+
+}
+
+#footer-inner {
+    background: #f5f5f5 url(../images/footer.jpg) repeat-x left bottom;
+    border-top: solid 1px #ddd
+}
+
+#footer-sub {
+    background: #333333 url(../images/tabs_back.png) repeat-x;
+}
+
+#footer-sub a:link,
+#footer-sub a:visited {
+    color: #fff
+}
+
+.box1 {
+    border-right: solid 1px #ddd
+}
+
+.box3 {
+    border-left: solid 1px #ddd;
+}
+
+.box h3 {
+    /*font-family: 'Titillium Maps', Arial;*/
+}
+
+#bottom a img {
+    border: 0 none;
+}
+
+/* ##########################  editor  ########################### */
+
+.contentpaneopen_edit img {
+    border: 0
+}
+
+form.editor fieldset {
+    border: solid 1px #ccc;
+}
+
+/* ++++++++++++++  edit  ++++++++++++++ */
+
+form#adminForm {
+    border: solid 0px #000
+}
+
+.edit form#adminForm fieldset {
+    border: solid 1px #ddd
+}
+
+/* ++++++++++++++  tooltip  ++++++++++++++ */
+.tip {
+    border: solid 1px #333;
+    background: #ffffcc;
+}
+
+table.pagenav,
+table.pagenav tr,
+table.pagenav td {
+    border: 0 !important
+}
+
+#main .categories-list ul {
+    list-style-type: none
+}
+
+/* contact  plain */
+#main .contact h3 {
+    border-bottom: solid 1px #ddd;
+    margin: 20px 0
+}
+
+.form-required {
+    font-weight: bold;
+    margin: 10px 0;
+    background: #fff url(../images/req.png) no-repeat;
+    padding: 10px 40px
+
+}
+
+.contact .inputbox {
+    background: #fff url(../images/content_bg.gif) repeat-x;
+    border: solid 1px #ccc;
+    padding: 3px
+}
+
+/* contact  slider */
+
+.panel {
+    border: solid 1px #ddd;
+    margin-top: -1px
+
+}
+
+#main .contact .panel h3 {
+    margin: 0px 0 0px 0;
+    padding: 0;
+    border: 0
+}
+
+.panel h3 a {
+    display: block;
+    padding: 6px;
+    text-decoration: none;
+    color: #444;
+    padding: 6px;
+}
+
+.panel h3.pane-toggler a {
+    background: #f9f9fa url(../images/slider_plus.png) right top no-repeat;
+}
+
+.pane-slider {
+    border: solid 0px;
+    padding: 0px 10px !important;
+    margin: 0;
+}
+
+.panel .contact-form,
+.panel .contact-miscinfo {
+    padding: 10px
+}
+
+.contact .panel .contact-form form,
+.contact .panel .contact-address {
+    margin: 20px 0 0 0
+}
+
+.categories-list .category-desc ul li {
+    list-style-type: square
+}
+
+/* tabs */
+
+div.current {
+
+    background: url(../images/nav_level_1.gif) repeat-x;
+}
+
+#close a {
+    text-decoration: none
+}
+
+/*Encyclopedia*/
+div.encyclopedia_col1 {
+    width: 49%;
+    float: left;
+
+}
+
+div.encyclopedia_col1 p.img_caption {
+    font-size: .6em;
+}
+
+div.encyclopedia_col2 {
+    width: 49%;
+    float: right;
+    padding-left: 3px;
+    margin-left: 2px;
+}
+
+div.encyclopedia_col2 p {
+    padding-left: 3px;
+    margin-left: 2px;
+}
+
+div.encyclopedia_links ul {
+    display: block;
+    margin: 0px 0px 1px 0px;
+    list-style-type: none;
+    padding: 10px 0px 10px 0px;
+    width: 100%
+}
+
+div.encyclopedia_links ul li {
+    display: inline;
+    padding: 2px;
+    margin: 2px;
+    white-space: nowrap;
+
+}
+
+/* ########################## sample module styling  ########################### */
+
+div.sample-module {
+    border: 2px dashed #ddd;
+    padding: 10px;
+    background-color: #f5f5f5;
+}

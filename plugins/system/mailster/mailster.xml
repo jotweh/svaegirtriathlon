@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="plugin" version="1.5" group="system" method="upgrade">
+	<name>Mailster Email Forwarder</name>
+	<creationDate>January 2012</creationDate>
+	<author>Holger Brandt IT Solutions</author>
+	<authorEmail>info@brandt-solutions.de</authorEmail>
+	<authorUrl>www.brandt-solutions.de</authorUrl>
+	<copyright>(C) 2010 - 2012 Holger Brandt IT Solutions</copyright>
+	<license>This component is released under the GNU/GPL License</license>
+	<version>0.3.5</version>
+	<description>Plugin of Mailster - This plugin is essential as it is needed to retrieve and forward emails.</description>
+	<files>
+		<filename plugin="mailster">mailster.php</filename>
+		<filename>mailster/index.html</filename>
+		<filename>mailster/license.txt</filename>
+		<filename>mailster/utils.php</filename>
+		<filename>mailster/plg.properties</filename>
+		<filename>mailster/version.properties</filename>
+	</files>
+	<languages>
+   		<language tag="en-GB">language/en-GB.plg_system_mailster.ini</language>
+   		<language tag="de-DE">language/de-DE.plg_system_mailster.ini</language>
+   		<language tag="fr-FR">language/fr-FR.plg_system_mailster.ini</language>
+	</languages>	
+	<params>	
+		<param name="trigger_source" type="list" default="all" label="PLG_MAILSTER_TRIGGER_SOURCE" description="PLG_MAILSTER_PLG_MAILSTER_TRIGGER_SOURCE_DETERMINES_WHICH_PAGELOADS_OF_JOOMLA_ARE_USED_TO_RETRIEVE_AND_SEND_MAILS">
+			<option value="all">PLG_MAILSTER_ALL_PAGELOADS</option>
+			<option value="admin">PLG_MAILSTER_BACKEND_ONLY</option>
+			<option value="cron">PLG_MAILSTER_CRONJOB_ONLY</option>
+		</param>
+		
+		<param name="last_exec_retrieve" type="hidden" default="-1" />
+		<param name="last_exec_sending" type="hidden" default="-1" />
+		
+		<param type="spacer" />
+		
+		<param name="minchecktime" type="text" default="240" size="10" label="PLG_MAILSTER_MIN_TIME_BETWEEN_RETRIEVING" description="PLG_MAILSTER_TRY_TO_RETRIEVE_MAILS_EVERY_X_SECONDS" />
+		<param name="minsendtime" type="text" default="60" size="10" label="PLG_MAILSTER_MIN_TIME_BETWEEN_SENDING" description="PLG_MAILSTER_CONTINUE_TO_FWD_SEND_MAILS_EVERY_X_SECONDS" />
+		
+		<param type="spacer" />
+			
+		<param name="maxexectime" type="text" default="10" 	size="10" label="PLG_MAILSTER_MAX_EXECUTION_TIME" description="PLG_MAILSTER_MAX_TIME_RETRIEVING_SENDING_RECOMMENDATION" />
+		<param name="minduration" type="text" default="2" 	size="10" label="PLG_MAILSTER_MIN_OPERATION_DURATION" description="PLG_MAILSTER_TIME_TO_COMPLETE_ACTION_ADJUST_TO_SERVER_PERFORMANCE_SIGNIFICANTLY_LOWER_THAN_MAX_EXEC_TIME" />
+		
+		<param type="spacer" />
+	</params>
+    <config>   
+		<fields name="params">
+			<fieldset name="basic">	
+				<field name="trigger_source" type="list" default="all" label="PLG_MAILSTER_TRIGGER_SOURCE" description="PLG_MAILSTER_PLG_MAILSTER_TRIGGER_SOURCE_DETERMINES_WHICH_PAGELOADS_OF_JOOMLA_ARE_USED_TO_RETRIEVE_AND_SEND_MAILS">
+					<option value="all">PLG_MAILSTER_ALL_PAGELOADS</option>
+					<option value="admin">PLG_MAILSTER_BACKEND_ONLY</option>
+					<option value="cron">PLG_MAILSTER_CRONJOB_ONLY</option>
+				</field>
+				
+				<field name="last_exec_retrieve" type="hidden" default="-1" />
+				<field name="last_exec_sending" type="hidden" default="-1" />
+				
+				<field type="spacer" />
+				
+				<field name="minchecktime" type="text" default="240" size="10" label="PLG_MAILSTER_MIN_TIME_BETWEEN_RETRIEVING" description="PLG_MAILSTER_TRY_TO_RETRIEVE_MAILS_EVERY_X_SECONDS" />
+				<field name="minsendtime" type="text" default="60" size="10" label="PLG_MAILSTER_MIN_TIME_BETWEEN_SENDING" description="PLG_MAILSTER_CONTINUE_TO_FWD_SEND_MAILS_EVERY_X_SECONDS" />
+				
+				<field type="spacer" />
+					
+				<field name="maxexectime" type="text" default="10" 	size="10" label="PLG_MAILSTER_MAX_EXECUTION_TIME" description="PLG_MAILSTER_MAX_TIME_RETRIEVING_SENDING_RECOMMENDATION" />
+				<field name="minduration" type="text" default="2" 	size="10" label="PLG_MAILSTER_MIN_OPERATION_DURATION" description="PLG_MAILSTER_TIME_TO_COMPLETE_ACTION_ADJUST_TO_SERVER_PERFORMANCE_SIGNIFICANTLY_LOWER_THAN_MAX_EXEC_TIME" />
+				
+				<field type="spacer" />
+			</fieldset>
+		</fields>
+	</config>	
+</install>

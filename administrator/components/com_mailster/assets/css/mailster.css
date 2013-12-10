@@ -1,0 +1,235 @@
+/**
+ * @package Joomla
+ * @subpackage Mailster
+ * @copyright (C) 2011 Holger Brandt IT Solutions
+ * @license GNU/GPL, see license.txt
+ * Mailster is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License 2
+ * as published by the Free Software Foundation.
+ * 
+ * Mailster is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with Mailster; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA
+ * or see http://www.gnu.org/licenses/.
+ */
+ 
+.icon-32-updatecheck-mailster { background-image: url(../images/icon-32-updatecheck-mailster.png); }
+.icon-32-newList-mailster { background-image: url(../images/icon-32-newList-mailster.png); }
+.icon-32-copyList-mailster { background-image: url(../images/icon-32-copyList-mailster.png); }
+.icon-32-viewMail-mailster { background-image: url(../images/icon-32-viewMail-mailster.png); }
+.icon-32-removeUsers-mailster { background-image: url(../images/icon-32-removeUsers-mailster.png); }
+.icon-32-removeGroups-mailster { background-image: url(../images/icon-32-removeGroups-mailster.png); }
+.icon-32-resendMails-mailster { background-image: url(../images/icon-32-resendMails-mailster.png); }
+.icon-32-clearLog-mailster { background-image: url(../images/icon-32-clearLog-mailster.png); }
+
+.icon-48-mailster { background-image: url(../images/icon-48-mailster.png); }
+.icon-48-check-mailster{ background-image: url(../images/icon-48-check-mailster.png); }
+.icon-48-log-mailster{ background-image: url(../images/icon-48-log-mailster.png); }
+.icon-48-csv-mailster{ background-image: url(../images/icon-48-csv-mailster.png); }
+.icon-48-list-mailster{ background-image: url(../images/icon-48-list-mailster.png); }
+.icon-48-addList-mailster{ background-image: url(../images/icon-48-addList-mailster.png); }
+.icon-48-lists-mailster{ background-image: url(../images/icon-48-lists-mailster.png); }
+.icon-48-info-mailster{ background-image: url(../images/icon-48-info-mailster.png); }
+.icon-48-group-mailster{ background-image: url(../images/icon-48-group-mailster.png); }
+.icon-48-groups-mailster{ background-image: url(../images/icon-48-groups-mailster.png); }
+.icon-48-user-mailster{ background-image: url(../images/icon-48-user-mailster.png); }
+.icon-48-users-mailster{ background-image: url(../images/icon-48-users-mailster.png); }
+.icon-48-listmembers-mailster{ background-image: url(../images/icon-48-listmembers-mailster.png); }
+.icon-48-mail-mailster{ background-image: url(../images/icon-48-mail-mailster.png); }
+.icon-48-mailArchive-mailster{ background-image: url(../images/icon-48-mailArchive-mailster.png); }
+.icon-48-resendMails-mailster { background-image: url(../images/icon-48-resendMails-mailster.png); }
+.icon-48-mailQueue-mailster{ background-image: url(../images/icon-48-mailQueue-mailster.png); }
+
+.mtrActivityIndicator{ 
+	background-image:url('../images/16-loader.gif');
+	background-repeat:no-repeat;
+	vertical-align:middle;
+}
+
+.submitContainer{
+	text-align:right;
+	width:100%;
+	height:30px;
+}
+
+.submitContainer input{
+	width:200px;
+}
+
+.submitButton{
+	width:100px;
+	height:30px;
+	cursor:pointer;	
+}
+
+.submitButton:hover{
+	background-color:#999999;
+}
+
+.selListButton{	
+	width:100px;
+	height:30px;
+}
+
+.selListButton:hover{
+	background-color:#999999;
+}
+
+.taskLinkList{
+	padding-left:12px;
+	margin-top:0px;
+}
+
+ul.taskLinkList li{
+	list-style:none;
+	margin-bottom:2px;
+}
+
+.taskLinkList img {
+	margin-right:5px;
+	margin-bottom:5px;
+	vertical-align: middle;
+}
+
+ul#infoLinkList{
+	padding-left:12px;
+	margin-top:0px;
+}
+
+ul#infoLinkList li{
+	list-style:none;
+	margin-bottom:2px;
+	height:35px;
+}
+
+ul#infoLinkList li a {
+	margin-right:5px;
+	margin-bottom:5px;
+	padding-top:25px;
+	vertical-align: middle;
+}
+
+#addUserForm, #addGroupForm, #importCSVForm{
+	width:600px;
+}
+
+#startPageTable tr td{
+	vertical-align:top;	
+}
+
+#startPageTable th{
+	background-color:#CFCFCF;
+	margin:2px;
+}
+
+#generalStats th{
+	background-color:#E3E4E3;
+	border:1px solid #BBBBBB;
+}
+
+#taskTable th{
+	background-color:#E3E4E3;
+	border:1px solid #BBBBBB;
+}
+
+
+#detailedStats th{
+	background-color:#E3E4E3;
+	border:1px solid #BBBBBB;
+}
+
+#leftCol{
+	float:left;
+}
+
+#rightCol{
+	float:right;
+}
+
+#mailsterLogo img.maisterLogo{
+	width:300px;
+	margin-right:-13px;
+}
+
+#mailsterLogo form{
+	text-align:center;
+	padding-top:10px;
+}
+
+#mailsterLogo input{
+	border:none;
+}
+
+table.notifiesTbl{
+	border:1px solid black;
+	background-color:white;
+	border-collapse:collapse;
+}
+
+.notifiesTbl tr th{
+	border-bottom: 1px solid #333333;
+	border-left: 1px solid #333333;
+	border-right: 1px solid #333333;
+	background-color:#EEEEEE;
+}
+
+.notifiesTbl tr td{
+	border-bottom: 1px solid #999999;
+	border-left: 1px solid #999999;
+	border-right: 1px solid #999999;
+}
+
+tr.logEntry {
+	font-size:9pt;
+}
+
+#logTable td.logEntryWarning{
+	background-color:#FFFF00;
+	color:#000000;
+}
+#logTable td.logEntryError{
+	background-color:#FF0000;
+	color:#000000;
+}
+#logTable td.logEntryInfo{
+	background-color:#00DDDD;
+	color:#000000;
+}
+#logTable td.logEntryDebug{
+	background-color:#CCCCCC;
+	color:#000000;
+}
+#logTable tr{
+	padding-top:0px;
+	padding-bottom:0px;
+}
+#logTable tr td{
+	padding-top:0px;
+	padding-bottom:0px;
+}
+
+.tabsFooter{
+	width:100%;
+	text-align:center;
+	display:block;
+}
+
+#paramsadd_reply_prefix0{
+	border: 1px solid silver;
+    font-size: 10px;
+}
+
+#paramsadd_reply_prefix0-lbl{
+	display:inline;
+	float:left;
+}
+
+#paramsadd_reply_prefix1-lbl{
+	display:inline;
+	float:left;
+}

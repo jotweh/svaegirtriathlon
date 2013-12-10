@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="plugin" version="1.5" group="content" method="upgrade">
+	<name>Mailster Subscriber</name>
+	<creationDate>January 2012</creationDate>
+	<author>Holger Brandt IT Solutions</author>
+	<authorEmail>info@brandt-solutions.de</authorEmail>
+	<authorUrl>www.brandt-solutions.de</authorUrl>
+	<copyright>(C) 2010 - 2012 Holger Brandt IT Solutions</copyright>
+	<license>This component is released under the GNU/GPL License</license>
+	<version>0.3.5</version>
+	<description>Subscriber Plugin of Mailster - Enables the integration of subscribe and unsubscribe forms in articles.</description>
+	<files>
+		<filename plugin="mailstersubscriber">mailstersubscriber.php</filename>
+		<folder>language</folder>
+		<folder>mailstersubscriber</folder>
+	</files> 
+	<languages>
+   		<language tag="en-GB">language/en-GB.plg_content_mailstersubscriber.ini</language>
+   		<language tag="de-DE">language/de-DE.plg_content_mailstersubscriber.ini</language>
+   		<language tag="fr-FR">language/fr-FR.plg_content_mailstersubscriber.ini</language>
+	</languages>	
+	<params>	
+		<param name="captcha" type="list" default="0" label="PLG_MAILSTER_ACTIVATE_CAPTCHA_PROTECTION" description="PLG_MAILSTER_ACTIVATE_CAPTCHA_PROTECTION_MAKE_SURE_THAT_YOU_ADDED_THE_API_KEYS_IN_MAILSTERS_CONIFG">
+			<option value="0">PLG_MAILSTER_JNO</option>
+			<option value="recaptcha">PLG_MAILSTER_CAPTCHA_RECAPTCHA</option>
+			<option value="mathcaptcha">PLG_MAILSTER_CAPTCHA_MATH</option>
+		</param>		
+		<param name="design_choice" type="list" default="" label="PLG_MAILSTER_DESIGN_CHOICE" description="PLG_MAILSTER_DESIGN_PRESETS_CHOICE">
+			<option value="">PLG_MAILSTER_NONE_DESIGN</option>
+			<option value="black">PLG_MAILSTER_BLACK_DESIGN</option>
+			<option value="blue">PLG_MAILSTER_BLUE_DESIGN</option>
+			<option value="red">PLG_MAILSTER_RED_DESIGN</option>
+			<option value="white">PLG_MAILSTER_WHITE_DESIGN</option>
+		</param>
+		<param name="smart_hide" type="radio" default="0" label="PLG_MAILSTER_SMART_HIDE" description="PLG_MAILSTER_SMART_HIDE_SUBSCRIBE_FORM_WHEN_USER_IS_ALREADY_SUBSCRIBED_TO_MAILING_LIST_HIDE_UNSUBSCRIBE_FORM_WHEN_USER_IS_ALREADY_SUBSCRIBED_TO_MAILING_LIST">
+			<option value="0">PLG_MAILSTER_JNO</option>
+			<option value="1">PLG_MAILSTER_JYES</option>
+		</param>		
+		<param name="prefix_class" type="text" default="mailster_subscriber_" size="50" label="PLG_MAILSTER_CSS_PREFIX_CLASS" description="PLG_MAILSTER_CSS_PREFIX_CLASS_OF_THE_SUBSCRIPTION_BOX_ONLY_ACTIVE_WITHOUT_DESIGN_CHOICE" />
+		<param name="mailing_list" type="text" default="NEWSLETTER" size="50" label="PLG_MAILSTER_MAILING_LIST_LABEL" description="PLG_MAILSTER_MAILING_LIST_LABEL_FOR_LIST_NAME_OR_LIST_CHOICE" />
+		<param type="spacer" name="a" label="" default="" />		
+		<param name="subscribe_header" type="text" default="SUBSCRIBE TO THE NEWSLETTER" size="50" label="PLG_MAILSTER_SUBSCRIPTION_BOX_HEADER" description="PLG_MAILSTER_SUBSCRIPTION_BOX_HEADER" />
+		<param name="subscriber_name" type="text" default="NAME" size="50" label="PLG_MAILSTER_SUBSCRIBER_NAME_LABEL" description="PLG_MAILSTER_SUBSCRIBER_NAME_FIELD_LABEL" />
+		<param name="subscriber_email" type="text" default="EMAIL" size="50" label="PLG_MAILSTER_SUBSCRIBER_EMAIL_LABEL" description="PLG_MAILSTER_SUBSCRIBER_EMAIL_FIELD_LABEL" />
+		<param name="subscribe_button" type="text" default="SUBSCRIBE" size="50" label="PLG_MAILSTER_SUBSCRIBE_BUTTON_LABEL" description="PLG_MAILSTER_SUBSCRIBE_BUTTON_LABEL" />	
+		<param name="subscribe_thank_msg" type="text" default="THANK YOU FOR SUBSCRIBING" size="50" label="PLG_MAILSTER_SUBSCRIPTION_OK_TEXT" description="PLG_MAILSTER_SUBSCRIPTION_SUCCESSFULL_MESSAGE" />
+		<param name="subscribe_error_msg" type="text" default="SUBSCRIPTION ERROR OCCURED PLEASE TRY AGAIN" size="50" label="PLG_MAILSTER_SUBSCRIPTION_ERROR_TEXT" description="PLG_MAILSTER_SUBSCRIPTION_FAILED_MESSAGE" />	
+		<param type="spacer" name="b" label="" default="" />	
+		<param name="unsubscribe_header" type="text" default="UNSUBSCRIBE FROM NEWSLETTER" size="50" label="PLG_MAILSTER_UNSUBSCRIPTION_BOX_HEADER" description="PLG_MAILSTER_UNSUBSCRIPTION_BOX_HEADER" />
+		<param name="unsubscriber_email" type="text" default="EMAIL" size="50" label="PLG_MAILSTER_UNSUBSCRIBER_EMAIL_LABEL" description="PLG_MAILSTER_UNSUBSCRIBER_EMAIL_FIELD_LABEL" />
+		<param name="unsubscribe_button" type="text" default="UNSUBSCRIBE" size="50" label="PLG_MAILSTER_UNSUBSCRIBE_BUTTON_LABEL" description="PLG_MAILSTER_UNSUBSCRIBE_BUTTON_LABEL" />	
+		<param name="unsubscribe_thank_msg" type="text" default="SORRY THAT YOU DECIDED TO UNSUBSCRIBE HOPE TO SEE YOU AGAIN IN THE FUTURE" size="50" label="PLG_MAILSTER_UNSUBSCRIPTION_OK_TEXT" description="PLG_MAILSTER_UNSUBSCRIPTION_SUCCESSFULL_MESSAGE" />
+		<param name="unsubscribe_error_msg" type="text" default="UNSUBSCRIPTION ERROR OCCURED PLEASE TRY AGAIN" size="50" label="PLG_MAILSTER_UNSUBSCRIPTION_ERROR_TEXT" description="PLG_MAILSTER_UNSUBSCRIPTION_FAILED_MESSAGE" />	
+		<param type="spacer" name="c" label="" default="" />	
+	</params>
+    <config>   
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="captcha" type="list" default="0" label="PLG_MAILSTER_ACTIVATE_CAPTCHA_PROTECTION" description="PLG_MAILSTER_ACTIVATE_CAPTCHA_PROTECTION_MAKE_SURE_THAT_YOU_ADDED_THE_API_KEYS_IN_MAILSTERS_CONIFG">
+					<option value="0">PLG_MAILSTER_JNO</option>
+					<option value="recaptcha">PLG_MAILSTER_CAPTCHA_RECAPTCHA</option>
+					<option value="mathcaptcha">PLG_MAILSTER_CAPTCHA_MATH</option>
+				</field>
+				<field name="design_choice" type="list" default="" label="PLG_MAILSTER_DESIGN_CHOICE" description="PLG_MAILSTER_DESIGN_PRESETS_CHOICE">
+					<option value="">PLG_MAILSTER_NONE_DESIGN</option>
+					<option value="black">PLG_MAILSTER_BLACK_DESIGN</option>
+					<option value="blue">PLG_MAILSTER_BLUE_DESIGN</option>
+					<option value="red">PLG_MAILSTER_RED_DESIGN</option>
+					<option value="white">PLG_MAILSTER_WHITE_DESIGN</option>
+				</field>
+				<field name="smart_hide" type="radio" default="0" label="PLG_MAILSTER_SMART_HIDE" description="PLG_MAILSTER_SMART_HIDE_SUBSCRIBE_FORM_WHEN_USER_IS_ALREADY_SUBSCRIBED_TO_MAILING_LIST_HIDE_UNSUBSCRIBE_FORM_WHEN_USER_IS_ALREADY_SUBSCRIBED_TO_MAILING_LIST">
+					<option value="0">PLG_MAILSTER_JNO</option>
+					<option value="1">PLG_MAILSTER_JYES</option>
+				</field>		
+				<field name="prefix_class" type="text" default="mailster_subscriber_" size="50" label="PLG_MAILSTER_CSS_PREFIX_CLASS" description="PLG_MAILSTER_CSS_PREFIX_CLASS_OF_THE_SUBSCRIPTION_BOX_ONLY_ACTIVE_WITHOUT_DESIGN_CHOICE" />
+				<field name="mailing_list" type="text" default="NEWSLETTER" size="50" label="PLG_MAILSTER_MAILING_LIST_LABEL" description="PLG_MAILSTER_MAILING_LIST_LABEL_FOR_LIST_NAME_OR_LIST_CHOICE" />
+				<field type="spacer" name="a" label="" default="" />		
+				<field name="subscribe_header" type="text" default="SUBSCRIBE TO THE NEWSLETTER" size="50" label="PLG_MAILSTER_SUBSCRIPTION_BOX_HEADER" description="PLG_MAILSTER_SUBSCRIPTION_BOX_HEADER" />
+				<field name="subscriber_name" type="text" default="NAME" size="50" label="PLG_MAILSTER_SUBSCRIBER_NAME_LABEL" description="PLG_MAILSTER_SUBSCRIBER_NAME_FIELD_LABEL" />
+				<field name="subscriber_email" type="text" default="EMAIL" size="50" label="PLG_MAILSTER_SUBSCRIBER_EMAIL_LABEL" description="PLG_MAILSTER_SUBSCRIBER_EMAIL_FIELD_LABEL" />
+				<field name="subscribe_button" type="text" default="SUBSCRIBE" size="50" label="PLG_MAILSTER_SUBSCRIBE_BUTTON_LABEL" description="PLG_MAILSTER_SUBSCRIBE_BUTTON_LABEL" />	
+				<field name="subscribe_thank_msg" type="text" default="THANK YOU FOR SUBSCRIBING" size="50" label="PLG_MAILSTER_SUBSCRIPTION_OK_TEXT" description="PLG_MAILSTER_SUBSCRIPTION_SUCCESSFULL_MESSAGE" />
+				<field name="subscribe_error_msg" type="text" default="SUBSCRIPTION ERROR OCCURED PLEASE TRY AGAIN" size="50" label="PLG_MAILSTER_SUBSCRIPTION_ERROR_TEXT" description="PLG_MAILSTER_SUBSCRIPTION_FAILED_MESSAGE" />	
+				<field type="spacer" name="b" label="" default="" />	
+				<field name="unsubscribe_header" type="text" default="UNSUBSCRIBE FROM NEWSLETTER" size="50" label="PLG_MAILSTER_UNSUBSCRIPTION_BOX_HEADER" description="PLG_MAILSTER_UNSUBSCRIPTION_BOX_HEADER" />
+				<field name="unsubscriber_email" type="text" default="EMAIL" size="50" label="PLG_MAILSTER_UNSUBSCRIBER_EMAIL_LABEL" description="PLG_MAILSTER_UNSUBSCRIBER_EMAIL_FIELD_LABEL" />
+				<field name="unsubscribe_button" type="text" default="UNSUBSCRIBE" size="50" label="PLG_MAILSTER_UNSUBSCRIBE_BUTTON_LABEL" description="PLG_MAILSTER_UNSUBSCRIBE_BUTTON_LABEL" />	
+				<field name="unsubscribe_thank_msg" type="text" default="SORRY THAT YOU DECIDED TO UNSUBSCRIBE HOPE TO SEE YOU AGAIN IN THE FUTURE" size="50" label="PLG_MAILSTER_UNSUBSCRIPTION_OK_TEXT" description="PLG_MAILSTER_UNSUBSCRIPTION_SUCCESSFULL_MESSAGE" />
+				<field name="unsubscribe_error_msg" type="text" default="UNSUBSCRIPTION ERROR OCCURED PLEASE TRY AGAIN" size="50" label="PLG_MAILSTER_UNSUBSCRIPTION_ERROR_TEXT" description="PLG_MAILSTER_UNSUBSCRIPTION_FAILED_MESSAGE" />	
+				<field type="spacer" name="c" label="" default="" />
+			</fieldset>
+		</fields>
+	</config>	
+</install>

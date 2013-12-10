@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id -->
+<extension type="package" version="1.6">
+	<name>EventList German</name>
+	<packagename>de-DE</packagename>
+	<creationDate>2011-10-18</creationDate>
+	<version>1.0.2 Stable</version>
+	<author>Christoph Lukes, Pascal Eilrich</author>
+	<authorEmail>schlu@schlu.net</authorEmail>
+	<authorUrl>www.schlu.net</authorUrl>
+	<copyright>(C) 2008 Christoph Lukes, (C) 2011 Pascal Eilrich</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>German language pack for EventList</description>
+	<files>
+		<file type="language" client="site" id="de-DE">site_de-DE.zip</file>
+		<file type="language" client="admin" id="de-DE">admin_de-DE.zip</file>
+	</files>
+</extension>

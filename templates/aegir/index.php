@@ -10,7 +10,7 @@
 defined('_JEXEC') or die;
 
 // check modules
-$showRightColumn  = ($this->countModules('position-3') or $this->countModules('position-6') or $this->countModules('position-8'));
+$showRightColumn  = $this->countModules('position-3') || $this->countModules('position-8'); // or $this->countModules('position-6');
 $showbottom      = ($this->countModules('position-9') or $this->countModules('position-10') or $this->countModules('position-11'));
 $showleft      = ($this->countModules('position-4') or $this->countModules('position-7') or $this->countModules('position-5'));
 

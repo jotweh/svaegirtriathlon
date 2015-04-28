@@ -8,6 +8,7 @@
 if ($_SERVER['HTTP_HOST'] == 'localhost' && $_SERVER['DOCUMENT_ROOT'] == '/var/www') {
     ini_set('display_errors', 1);
     error_reporting(E_ALL ^E_STRICT ^E_NOTICE ^E_DEPRECATED);
+	define(JDEBUG, 1);
 }
 
 // Set flag that this is a parent file.
